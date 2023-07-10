@@ -14,8 +14,9 @@ fn main() {
     println!("{subject} {verb} {object}",
         object="the lazy dog",
         subject="the quick brown fox",
-        verb="jumps over"
+        verb="jumps"
     );
+
 
     // Special formatting can be specified after a `:`.
     println!("{} of {:b} people know binary, the other half doesn't", 1, 4);
@@ -34,14 +35,14 @@ fn main() {
     // Create a structure named `Structure` which contains an `i32`.
     #[derive(Debug)]
     struct Person {
-        x: i32,
-        y: i32
+        x: i64,
+        y: i64
     }
 
     // However, custom types such as this structure require more complicated
     // handling. This will not work.
     let x = 10;
-    let y = 1;
+    let y = 20;
     let data = Person {x, y};
     println!("{:?}", data);
 
