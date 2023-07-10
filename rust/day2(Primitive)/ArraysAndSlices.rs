@@ -21,15 +21,16 @@ fn main() {
     println!("first element of the array: {}", xs[0]);
     println!("second element of the array: {}", xs[1]);
 
-    // `len` returns the count of elements in the array
-    println!("number of elements in array: {}", xs.len());
-
     // Arrays are stack allocated
     println!("array occupies {} bytes", mem::size_of_val(&xs));
 
+    // `len` returns the count of elements in the array
+    println!("number of elements in array: {}", xs.len());
+
+
     // Arrays can be automatically borrowed as slices
-    analyze_slice(&xs);
     println!("borrow the whole array as a slice");
+    analyze_slice(&xs);
 
     // Slices can point to a section of an array
     // They are of the form [starting_index..ending_index]
